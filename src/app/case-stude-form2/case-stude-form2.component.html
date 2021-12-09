@@ -1,0 +1,37 @@
+
+<hr>
+<h1><b>Enter Owner Details </b></h1>
+
+    <form [formGroup]  = "form" (ngSubmit) = "onSubmit(form.value)">
+        <table>
+        <tr>
+            <td>
+                <b>Owner Id:</b>
+            </td>
+            <td>    
+                <input type="number" name="OwnerId" placeholder="Enter Id" formControlName="OwnerId">
+            </td>
+        </tr>
+
+        <tr>
+            <td>    
+                <b>Owner Name:</b>
+            </td>
+            <td>    
+                <input type="text" name="TaskName" placeholder="Enter Owner Name" formControlName="OwnerName">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <b>Contact Email:</b> 
+
+            </td>
+            <td>
+                <input type="email" name="Email" placeholder="Enter Email" formControlName="Email" >
+            </td>
+        </tr>
+        
+    <input type="submit" value="Submit" [disabled]="!form.valid">
+</table>
+    </form>
+

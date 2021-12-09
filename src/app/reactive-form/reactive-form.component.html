@@ -1,0 +1,22 @@
+<hr>
+<h1><b>Reactive Form</b></h1>
+<form [formGroup]  = "form" (ngSubmit) = "onSubmit(form.value)">
+    <b>Last Name</b> <br>
+    <input type="text" name="firstname" placeholder="Enter First Name" formControlName="firstname">
+    <br>
+    <b>Last Name</b> <br>
+    <input type="text" name="lastname" placeholder="Enter Last Name" formControlName="lastname">
+    <br>
+    <b>Select Language</b><br>
+    <select name="language" formControlName = "language">
+        <option value="JavaScript">JavaScript</option>
+        <option value="TypeScript">TypeScript</option>
+        <option value="Python">Python</option>
+        <option value="C Sharp">C Sharp</option>
+    </select>
+    <br><br>
+    <input type="submit" value="Submit" [disabled]="!form.valid">
+    
+</form>
+
+ 
